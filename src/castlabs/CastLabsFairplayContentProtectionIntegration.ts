@@ -34,7 +34,7 @@ export class CastLabsFairplayContentProtectionIntegration implements ContentProt
     request.headers = {
       ...request.headers,
       'x-dt-custom-data': this.customData!,
-      'x-dt-auth-token': this.contentProtectionConfiguration.integrationParameters.token ?? '',
+      'x-dt-auth-token': this.contentProtectionConfiguration.integrationParameters.token,
       'content-type': 'application/x-www-form-urlencoded',
     };
     const body = `spc=${encodeURIComponent(fromUint8ArrayToBase64String(request.body!))}&${encodeURIComponent(this.contentId!)}`;
