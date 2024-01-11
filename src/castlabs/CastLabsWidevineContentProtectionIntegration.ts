@@ -23,7 +23,7 @@ export class CastLabsWidevineContentProtectionIntegration implements ContentProt
     request.headers = {
       ...request.headers,
       'x-dt-custom-data': this.customData!,
-      'x-dt-auth-token': this.contentProtectionConfiguration.integrationParameters.token ?? '',
+      'x-dt-auth-token': this.contentProtectionConfiguration.integrationParameters.token,
     };
 
     return request;
